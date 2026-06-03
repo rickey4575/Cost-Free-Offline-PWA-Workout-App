@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workout</title>
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+  <body>
+    <h1>Workout</h1>
+    <p id="status">Loading…</p>
+
+    <!-- Templates view -->
+    <section id="templatesView">
+        <h2>Recent activity</h2>
+        <div id="recentActivity"></div>
+
+        <hr />
+
+        <h2>Templates</h2>
+        <div style="margin: 8px 0;">
+            <button id="newTemplateBtn">+ New template</button>
+        </div>
+        <div id="templates"></div>
+
+        <hr />
+
+        <h3 id="editorTitle">Template editor</h3>
+        <div id="templateEditor" style="max-width:700px;">
+            <p style="opacity:0.7;">Select a template to edit, or create a new one.</p>
+        </div>
+    </section>
+
+    <!-- Workout view -->
+    <section id="workoutView" style="display:none;">
+        <button id="backBtn">← Back to templates</button>
+        <h2 id="workoutTitle"></h2>
+
+        <div style="margin: 12px 0;">
+            <label for="workoutNotes"><strong>Workout notes</strong></label><br />
+            <textarea id="workoutNotes" rows="3" style="width:100%; max-width:700px;"></textarea><br />
+            <button id="finishBtn">Finish workout</button>
+            <span id="finishStatus" style="margin-left:8px;"></span>
+        </div>
+
+        <div id="restTimer"></div>
+
+        <div id="exercises"></div>
+
+        <hr />
+
+        <h3>History (this template)</h3>
+        <div id="history"></div>
+    </section>
+
+    <h2>Debug output</h2>
+    <pre id="out"></pre>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
